@@ -1,0 +1,13 @@
+MODEL_NAME = 'distilbert-base-uncased'  # Название предобученной модели
+EPOCHS = 3                             # Количество проходов по данным
+BATCH_SIZE = 10                         # Размер пакета данных за одну итерацию
+LEARNING_RATE = 2e-5                   # Скорость обучения
+ALL_LABELS = ['__label__AD', '__label__NEUTRAL', '__label__OBSCENITY', '__label__INSULT', "__label__POLITICS"]
+PIPE_LABLES = ['advertising', 'neutral', 'politics', 'porn']
+LABEL_TO_ID = {label:i for i, label in enumerate(ALL_LABELS)}
+MODEL_DIRECTORY = 'model'
+DATASET_DIRECTORY = 'train data'
+DATA_DIR = DATASET_DIRECTORY
+EARLY_STOPPING_PATIENCE = 2
+MAX_LEN = 128
+BOT_TOKEN = '7224581513:AAFnwbPS005_mozgFA3vJ5_HjE7gIvNDIrU'
